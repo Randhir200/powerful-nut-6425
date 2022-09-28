@@ -13,6 +13,7 @@ import {
     PopoverArrow,
     PopoverCloseButton,
 } from '@chakra-ui/react'
+// import Demo from '../Pages/Demo'
 const Navbar = () => {
     const CustomCard = React.forwardRef(({ children, ...rest }, ref) => (
         <Box p='1'>
@@ -49,8 +50,9 @@ const Navbar = () => {
                     </Tooltip>
                 </Box>
 
-                <NavLink>Pricing</NavLink>
-                <NavLink>Demo</NavLink>
+                
+                <Link to={"/price"}>Price</Link> 
+                <Link to={"/demo"}>Demo</Link> 
             </Box>
             <Box h="100%" w="60%" display={"flex"} justifyContent=
                 "flex-end" gap="30px" alignItems={"center"} paddingRight="40px">
