@@ -49,7 +49,7 @@ const Navbar = () => {
                     </Tooltip>
                 </Box>
 
-                <NavLink>Pricing</NavLink>
+                <NavLink to="/pricing">Pricing</NavLink>
                 <NavLink>Demo</NavLink>
             </Box>
             <Box h="100%" w="60%" display={"flex"} justifyContent=

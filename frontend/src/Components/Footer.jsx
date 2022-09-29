@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 import {FaFacebook, FaLinkedin, FaTwitterSquare, FaYoutube} from "react-icons/fa"
 const Footer = () => {
     return (
-        <Box h="auto" bg="black" display={"flex"} flexDirection="column" color="white">
+        <Box h="auto" bg="black" display={"flex"} flexDirection="column" color="white" pb="50px">
             <Box w="80%" h="100%" margin={"auto"} >
                 <SimpleGrid columns={7} padding="20px">
                     <Box pt="20px" h="auto" w="90%" align={"center"}>
