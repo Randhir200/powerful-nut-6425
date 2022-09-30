@@ -13,6 +13,7 @@ import {
     PopoverArrow,
     PopoverCloseButton,
 } from '@chakra-ui/react'
+// import Demo from '../Pages/Demo'
 const Navbar = () => {
     const CustomCard = React.forwardRef(({ children, ...rest }, ref) => (
         <Box p='1'>
@@ -25,8 +26,10 @@ const Navbar = () => {
         <Box className={style.Navbar} h="80px" w="100%">
             <Box h="100%" w="100%" display="flex" gap="40px" alignItems="center" paddingLeft={'40px'}>
                 <Box h='60%' w='fit-content' display="flex" gap="20px" alignItems="center">
-                    <Img src="https://imgs.search.brave.com/BEwE4sSrLw6CI77kMSIogzHkuu-1YvvpkPcx7l-37LU/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vMy8zYS9F/dmVyaG91cl8lMjhz/b2Z0d2FyZSUyOV9s/b2dvLnBuZw" h="70%" />
-                    <Text>EverHour</Text>
+                   
+                   <Img src="https://imgs.search.brave.com/BEwE4sSrLw6CI77kMSIogzHkuu-1YvvpkPcx7l-37LU/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vMy8zYS9F/dmVyaG91cl8lMjhz/b2Z0d2FyZSUyOV9s/b2dvLnBuZw" h="70%" />
+                   <NavLink to="/">  <Text>EverHour</Text>  </NavLink>
+                 
                 </Box>
                 <Box display="flex" gap="5px" alignItems="center">
 
@@ -48,9 +51,11 @@ const Navbar = () => {
                         <CustomCard bg="#57BB71" color="white">New</CustomCard>
                     </Tooltip>
                 </Box>
+                <Link to={"/pricing"}>Price</Link> 
+                <Link to={"/demo"}>Demo</Link> 
+                <Link to={"/mainpage"}>MainPage</Link> 
 
-                <NavLink to="/pricing">Pricing</NavLink>
-                <NavLink>Demo</NavLink>
+
             </Box>
             <Box h="100%" w="60%" display={"flex"} justifyContent=
                 "flex-end" gap="30px" alignItems={"center"} paddingRight="40px">
