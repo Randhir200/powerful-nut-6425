@@ -46,7 +46,7 @@ const Homepage = () => {
   return (
     <Box mt="120px" mb="60px">
       {/* Upper Section */}
-      <Box w="100%" margin="auto" >
+      <Box w="80%" margin="auto" align="center" >
         <Heading>Powerful time tracking software with hassle-free <br /> integrations</Heading>
         <p style={{ width: "60%", margin: "auto", marginTop: "40px", color: "grey", fontSize: "16px" }}>Accurate time tracker for budgeting, client invoicing and painless payroll.<br />
           Works with the apps your team already use</p>
