@@ -53,9 +53,9 @@ const HomeAppCarousel = () => {
   return (
     <Box h="800px" w="60%" margin="auto" >
       <Swiper
-        pagination={{
-          type: "progressbar",
-        }}
+        // pagination={{
+          // type: "progressbar",
+        // }}
         // navigation={true}
         autoplay={true}
         modules={[Pagination, Autoplay]}
