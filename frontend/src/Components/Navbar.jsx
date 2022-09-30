@@ -53,6 +53,8 @@ const Navbar = () => {
                 
                 <Link to={"/price"}>Price</Link> 
                 <Link to={"/demo"}>Demo</Link> 
+                <Link to={"/mainpage"}>MainPage</Link> 
+
             </Box>
             <Box h="100%" w="60%" display={"flex"} justifyContent=
                 "flex-end" gap="30px" alignItems={"center"} paddingRight="40px">
