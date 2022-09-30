@@ -49,11 +49,10 @@ const Navbar = () => {
                         <CustomCard bg="#57BB71" color="white">New</CustomCard>
                     </Tooltip>
                 </Box>
-
-                
                 <Link to={"/price"}>Price</Link> 
                 <Link to={"/demo"}>Demo</Link> 
                 <Link to={"/mainpage"}>MainPage</Link> 
+
 
             </Box>
             <Box h="100%" w="60%" display={"flex"} justifyContent=
