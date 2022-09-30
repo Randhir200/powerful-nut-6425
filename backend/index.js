@@ -8,9 +8,9 @@ app.use(express.json());
 app.use('/projects', projectRoute)
 app.use('/clients', ClientRouter)
 
-app.get("/",(req,res)=>{
-    res.send("homepage")
-})
+// app.get("/",(req,res)=>{
+//     res.send("homepage")
+// })
 
 // =======
 app.use('/projects', projectRoute);
