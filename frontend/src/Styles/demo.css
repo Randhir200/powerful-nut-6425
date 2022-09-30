@@ -1,6 +1,34 @@
 .main_container{
-    border:1px solid red;
-    height:600px;
-    margin-top: 80px;
+    height:fit-content;
+    margin-top: 180px;
     margin-bottom:30px;
+}
+.heading_text{
+   
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    margin-top:30px
+}
+.center_card{
+   width:30%;
+   margin:auto;
+   height:fit-content;
+   border-radius:7px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding:20px;
+} 
+.center_card>ul{
+    text-align:left;
+}
+.center_card>ul>li{
+    font-weight:400;
+    color:#767676;
+    margin-top: 20px;
+}
+.bottomSignup{
+    width: 40%;
+    margin: auto;
+    margin-top: 40px;
+    align: center;
 }
