@@ -4,9 +4,27 @@ const projectSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now() },
   privacy: { type: String, enum: ['public', 'private'] },
   manage: { type: String, enum: ['everyone', 'admin'] },
-  todoId: Object,
-  inProgressTodoId: Object,
-  completedTodoId:Object,
+  todoId: [
+    {
+      type: String,
+      title: String,
+      description: String,
+    },
+  ],
+  inProgressTodoId: [
+    {
+      type: String,
+      title: String,
+      description: String,
+    },
+  ],
+  completedTodoId: [
+    {
+      type: String,
+      title: String,
+      description: String,
+    },
+  ],
   userId: Object,
   clientId: Object,
   memberId: Object,

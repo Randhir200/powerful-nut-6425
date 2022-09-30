@@ -7,6 +7,10 @@ projectRoute
             .get(projectController.getData)
             .post(projectController.create)
 
+projectRoute
+            .route('/:id')
+            .patch(projectController.update)
+            .delete(projectController.delete)         
 
 module.exports = projectRoute
 
