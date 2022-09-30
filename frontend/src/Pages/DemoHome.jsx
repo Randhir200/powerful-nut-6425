@@ -2,12 +2,12 @@ import { Box, Flex, Text, Heading, Img, Input } from "@chakra-ui/react";
 import React from "react";
 import { Button } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
-import "../Styles/Demo.css";
+import styles from "../Styles/Demo.module.css";
 import { NavLink } from 'react-router-dom'
 const Demo = () => {
   return (
-    <Box className="main_container">
-      <Box className="heading_text">
+    <Box className={styles.main_container}>
+      <Box className={styles.heading_text}>
         <Heading fontSize={"52px"}>Book a 30-min live demo 🚀</Heading>
         <Text fontFamily="'geomanist-regular',sans-serif"
           fontWeight="400" fontSize="1.375rem" mt="30px" lineHeight="1.35rem" color="#767676">10+ users? Let one of our customer success experts show you how Everhour <br /> works, with plenty of time set aside for questions</Text>
@@ -18,7 +18,7 @@ const Demo = () => {
       </Box>
       {/* https://www.youtube.com/playlist?list=PLpi40TLI2leiI-UuWIu-19xdTuGZwtHU3 */}
       {/* Card */}
-      <Box className="center_card">
+      <Box className={styles.center_card}>
         <ul>
           <Text>What you'll learn</Text>
           <li><span style={{ fontSize: "10px" }}>🟢</span>&nbsp;&nbsp;&nbsp;<Text>We’ll briefly explain what’s so special about Everhour.</Text></li>
@@ -35,7 +35,7 @@ const Demo = () => {
 
         </ul>
       </Box>
-      <Box className="bottomSignup" >
+      <Box className={styles.bottomSignup} >
         <Box w="100%" pl="30px" pt="30px" >
           <Heading>Skip the demo and try for yourself?</Heading>
           <Text color="grey" mt="10px" fontSize={"15px"}>Try Everhour for free to see if it works for your business.<br />
