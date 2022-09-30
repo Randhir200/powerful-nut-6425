@@ -1,5 +1,5 @@
 .Footer_main{
-    height:auto;
+    height:100%;
     background-color:black;
      display:flex;
       flex-direction:column;
@@ -7,7 +7,8 @@
         padding-bottom:50px
 }
 .supply_footer{
-   visibility: hidden;
+   /* visibility:hidden; */
+   display: none;
 }
 
 @media (max-width:1000px){
@@ -15,7 +16,8 @@
        display: none;
     }
     .supply_footer{
-        visibility: unset;
+       display: flex;
+       flex-direction: column;
         width:100%;
         height: fit-content;
         background-color: black;

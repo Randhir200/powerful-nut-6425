@@ -43,6 +43,8 @@ const sliderData = [
   },
 ]
 const Homepage = () => {
+  const [width, setWidth] = React.useState(window.outerWidth)
+  console.log(width)
   return (
     <Box mt="120px" mb="60px">
       {/* Upper Section */}
@@ -61,7 +63,7 @@ const Homepage = () => {
 
       </Box>
       {/* Slider */}
-      <Box w="80%" h="auto" margin="auto" mt="40px" >
+      <Box w="80%" h="auto" margin="auto" align="center"  mt="40px" >
         <Heading>Track time and watch progress inside <br /> <span style={{ borderBottom: "4px solid #57BB71" }}>two dozen</span> popular apps</Heading>
         {/* Icons */}
         <Box display={"flex"} gap="40px" justifyContent={"center"} mt="40px" >
@@ -89,7 +91,7 @@ const Homepage = () => {
             {
               sliderData.map((item) => {
                 return <SwiperSlide key={item.id}>
-                  <Box w="100%" justifyContent={"center"} >
+                  <Box w="100%" align="center" >
                     <Img src={item.src} w="60%" display={"block"} margin="auto" />
                   </Box>
                 </SwiperSlide>
