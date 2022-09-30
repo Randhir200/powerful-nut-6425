@@ -1,0 +1,52 @@
+.priceTag {
+    width: 30%;
+    height: max-content;
+    margin-top: 10px;
+}
+
+ul>li {
+    font-weight: 500;
+    display: flex;
+    gap: 10px;
+}
+
+li>img {
+    width: 20px;
+}
+
+.price_cards {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.query {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+}
+
+.query>.query_item {
+    padding: 30px;
+    text-align: left;
+}
+
+.bottomSignup {
+    width: 80%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    margin-top: 100px
+}
+
+@media (max-width:991px) {
+    .query {
+        display: flex;
+        flex-direction: column;
+    }
+    .bottomSignup{
+        display: flex;
+        flex-direction: column;
+    }
+}
