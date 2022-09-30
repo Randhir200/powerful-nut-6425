@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import "../Styles/demo.css";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const Demo = () => {
   return (
     <Box className="main_container">
@@ -13,9 +13,10 @@ const Demo = () => {
           fontWeight="400" fontSize="1.375rem" mt="30px" lineHeight="1.35rem" color="#767676">10+ users? Let one of our customer success experts show you how Everhour <br /> works, with plenty of time set aside for questions</Text>
         <Box display="flex" gap="30px" justifyContent="center" mt="50px">
           <Button bg="#57BB71" w="200px" h="50px" color="white" fontWeight="400">Schedule time</Button>
-          <Button border="1px solid #57BB71" w="200px" h="50px" bg="white" color="#57BB71" fontWeight="400">Watch videos</Button>
+          <Button border="1px solid #57BB71" w="200px" h="50px" bg="white" color="#57BB71" fontWeight="400"><NavLink>Watch videos</NavLink></Button>
         </Box>
       </Box>
+      {/* https://www.youtube.com/playlist?list=PLpi40TLI2leiI-UuWIu-19xdTuGZwtHU3 */}
       {/* Card */}
       <Box className="center_card">
         <ul>
@@ -37,8 +38,8 @@ const Demo = () => {
       <Box className="bottomSignup" >
         <Box w="100%" pl="30px" pt="30px" >
           <Heading>Skip the demo and try for yourself?</Heading>
-          <Text color="grey" mt="10px" fontSize={"15px"}>Try Everhour for free to see if it works for your business.<br/>
-No credit card required. No obligations.</Text>
+          <Text color="grey" mt="10px" fontSize={"15px"}>Try Everhour for free to see if it works for your business.<br />
+            No credit card required. No obligations.</Text>
           <Box display={"flex"} justifyContent="center" gap="10px">
             <Input type="email" placeholder='Work email... ' w="60%" mt="40px" h="50px" border="1px solid grey" />
 
