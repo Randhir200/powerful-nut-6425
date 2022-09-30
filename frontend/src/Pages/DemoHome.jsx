@@ -2,7 +2,7 @@ import { Box, Flex, Text, Heading, Img, Input } from "@chakra-ui/react";
 import React from "react";
 import { Button } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
-import "../Styles/demo.css";
+import "../Styles/Demo.css";
 import { NavLink } from 'react-router-dom'
 const Demo = () => {
   return (
