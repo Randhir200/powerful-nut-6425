@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Client from '../Components/Client';
@@ -15,7 +16,11 @@ const MainRoutes = () => {
       <Route path='/project' element={<Project />} />
       <Route path='/client' element={<Client />} />
       <Route path='/mainpage' element={<Mainpage />} />
-    </Routes>
+      <Route path="/" element={<Homepage/>} />
+      <Route path="/pricing" element={<Pricing/>}/>
+      <Route path="/demo" element={<DemoHome/>}/>
+  </Routes>
+  
   );
 };
 

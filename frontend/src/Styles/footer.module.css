@@ -1,0 +1,24 @@
+.Footer_main{
+    height:auto;
+    background-color:black;
+     display:flex;
+      flex-direction:column;
+       color:white;
+        padding-bottom:50px
+}
+.supply_footer{
+   visibility: hidden;
+}
+
+@media (max-width:1000px){
+    .Footer_main{
+       display: none;
+    }
+    .supply_footer{
+        visibility: unset;
+        width:100%;
+        height: fit-content;
+        background-color: black;
+        color: white;
+    }
+}

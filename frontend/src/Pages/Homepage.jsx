@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Img, Input, Text } from '@chakra-ui/react'
+import { Box, Button, Heading, Img, Input, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
 import HomeAppCarousel from '../Components/HomeAppCarousel'
 import { NavLink } from 'react-router-dom'
@@ -44,7 +44,7 @@ const sliderData = [
 ]
 const Homepage = () => {
   return (
-    <Box mt="120px">
+    <Box mt="120px" mb="60px">
       {/* Upper Section */}
       <Box w="100%" margin="auto" >
         <Heading>Powerful time tracking software with hassle-free <br /> integrations</Heading>
@@ -100,7 +100,7 @@ const Homepage = () => {
       </Box>
       {/* Review */}
 
-      <Box w="80%" h="550px" margin="auto" display={"flex"} gap="60px" mt="100px" justifyContent={"center"} padding="30px">
+      <Box w="80%" h="fit-content" margin="auto" display={"flex"} gap="60px" mt="100px" justifyContent={"center"} padding="30px">
         <Box w="80%" display={"flex"} flexDirection="column">
           <Box textAlign={"left"}>
             <Heading color="#28282B" fontSize="30px">Everhour has helped 240,000+ <br /> people complete over 135 <br /> million tasks in 3 million <br /> projects</Heading>
@@ -124,7 +124,7 @@ const Homepage = () => {
         </Box>
       </Box>
       {/* Bottom Signup */}
-      <Box w="70%" h="300px" display={"flex"} gap="10px" margin="auto" mt="100px">
+      <SimpleGrid columns={[1,1,1,2]} w="70%" h="auto" margin="auto" mt="100px">
         <Box w="100%" textAlign="left" pl="30px" pt="30px" >
           <Heading>Take control of your time with Everhour</Heading>
           <Text color="grey" mt="10px" fontSize={"20px"}>Beautiful integrations. Intuitive interface. No unexpected fees</Text>
@@ -146,7 +146,7 @@ const Homepage = () => {
           <ul>🟢 Spot burnout before it happens</ul>
 
         </Box>
-      </Box>
+      </SimpleGrid>
     </Box>
   )
 }
