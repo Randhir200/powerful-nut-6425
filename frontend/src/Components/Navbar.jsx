@@ -50,7 +50,7 @@ const Navbar = () => {
                 </Box>
 
                 <NavLink to="/pricing">Pricing</NavLink>
-                <NavLink>Demo</NavLink>
+                <NavLink to="/demo">Demo</NavLink>
             </Box>
             <Box h="100%" w="60%" display={"flex"} justifyContent=
                 "flex-end" gap="30px" alignItems={"center"} paddingRight="40px">
