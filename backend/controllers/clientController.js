@@ -1,11 +1,12 @@
 const Clientmodel=require("../models/clientModel");
-
+const Project=require("../models/projectModel")
 
 
 //get all projects
 exports.getData = async (req, res, next) => {
     const allClients= await Clientmodel.find()
-    if(allClients>0)
+  
+    if(allClients.length<=0)
     {
         res.send("please create a client")
     }
@@ -17,8 +18,13 @@ exports.getData = async (req, res, next) => {
 
 //create project
 exports.create = async (req, res, next)=>{
+   const allprojects=await Project.find()
+  const userid=req.headers.project
+  const{_id,name}=allprojects;
+
     const {Client_name,Business_Details,Tax,Discount}=req.body;
-    const createuser=new Clientmodel({Client_name,Business_Details,Tax,Discount})
+
+    const createuser=new Clientmodel({userid:userid,Client_name,Business_Details,Tax,Discount,Projects: {_id,name}})
     try{
       await createuser.save()
       res.send("note created")

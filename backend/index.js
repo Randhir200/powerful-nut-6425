@@ -8,6 +8,9 @@ app.use(express.json());
 app.use('/projects', projectRoute)
 app.use('/clients', ClientRouter)
 
+app.get("/",(req,res)=>{
+    res.send("homepage")
+})
 
 const port = process.env.PORT || 7000;
 app.listen(port,async ()=>{
