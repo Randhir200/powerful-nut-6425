@@ -20,52 +20,16 @@ import "./slidebar.css";
 
 const routes = [
   {
-    path: "/tracker",
-    name: "TIME TRACKER",
-    icon: <AiOutlineClockCircle />,
-  },
-  {
-    path: "/calendar",
-    name: "CALENDAR",
-    icon: <BiCalendar />,
-  },
-  {
     path: "/dashboard",
-    name: "DASHBOARD",
+    name: "HOME",
     icon: <MdOutlineDashboardCustomize />,
   },
+
+
   {
-    path: "/reports",
-    name: "REPORTS",
-    icon: <GoGraph />,
-    subRoutes: [
-      {
-        path: "/summary",
-        name: "Summary",
-      },
-      {
-        path: "/detailed",
-        name: "Detailed",
-      },
-      {
-        path: "/weekly",
-        name: "Weekly",
-      },
-      {
-        path: "/shared",
-        name: "Shared",
-      },
-    ],
-  },
-  {
-    path: "/team",
-    name: "TEAM",
-    icon: <RiTeamLine />,
-  },
-  {
-    path: "/clients",
-    name: "CLIENTS",
-    icon: <IoIosContact />,
+    path: "/tracker",
+    name: "TIME",
+    icon: <AiOutlineClockCircle />,
   },
   {
     path: "/projects",
@@ -73,54 +37,36 @@ const routes = [
     icon: <CgNotes />,
   },
   {
-    path: "/tags",
-    name: "TAGS",
-    icon: <BsTag />,
+    path: "/clients",
+    name: "CLIENTS",
+    icon: <IoIosContact />,
   },
   {
-    path: "/timesheet",
-    name: "TIMESHEET",
-    icon: <TbCalendarTime />,
+    path: "/team",
+    name: "TEAM",
+    icon: <RiTeamLine />,
   },
+
+
+
+
+
+  {
+    path: "/reports",
+    name: "REPORTS",
+    icon: <GoGraph />,
+  
+  },
+ 
+ 
+
+
   {
     path: "/settings",
     name: "SETTINGS",
     icon: <AiOutlineSetting />,
   },
-  {
-    path: "/showmore",
-    name: "SHOW MORE",
-    subRoutes: [
-      {
-        path: "/kiosks",
-        name: "KIOSKS",
-      },
-      {
-        path: "/schedul",
-        name: "SCHEDULE",
-      },
-      {
-        path: "/expenses",
-        name: "EXPENSES",
-      },
-      {
-        path: "/timeoff",
-        name: "TIME OFF",
-      },
-      {
-        path: "/activity",
-        name: "ACTIVITY",
-      },
-      {
-        path: "/approvals",
-        name: "APPROVALS",
-      },
-      {
-        path: "/invoices",
-        name: "INVOICES",
-      },
-    ],
-  },
+ 
 ];
 
  export const SideBar = ({ children }) => {
