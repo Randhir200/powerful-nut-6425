@@ -84,7 +84,7 @@ const Navbar = () => {
                 isOpen={isOpen}
                 placement='right'
                 onClose={onClose}
-                size="sm"
+                size="xl"
             >
                 <DrawerOverlay />
                 <DrawerContent>

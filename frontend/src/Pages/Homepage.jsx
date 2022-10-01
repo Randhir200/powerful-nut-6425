@@ -43,8 +43,6 @@ const sliderData = [
   },
 ]
 const Homepage = () => {
-  const [width, setWidth] = React.useState(window.outerWidth)
-  console.log(width)
   return (
     <Box mt="120px" mb="60px">
       {/* Upper Section */}
