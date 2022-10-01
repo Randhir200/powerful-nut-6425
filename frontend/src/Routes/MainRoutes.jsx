@@ -1,11 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Client from '../Components/Client';
 
-import Project from '../Components/Project';
-import Clients from '../Pages/Clients';
+
+
 import Dashbord from '../Pages/Dashbord';
-import DemoHome from '../Pages/DemoHome';
+
+
 import Homepage from '../Pages/Homepage';
 import Pricing from '../Pages/Pricing';
 const MainRoutes = () => {
@@ -16,8 +16,8 @@ const MainRoutes = () => {
       
       <Route path="/pricing" element={<Pricing/>}/>
       <Route path="/dashboard" element={<Dashbord/>}/>
-        <Route path="/clients" element={<Clients/>}/>
-      <Route path="/demo" element={<DemoHome/>}/>
+      
+     
   </Routes>
   
   );
