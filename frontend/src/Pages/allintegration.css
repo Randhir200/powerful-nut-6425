@@ -1,0 +1,137 @@
+
+.box1{
+        margin-top:220px;
+    /* border: 2px solid black; */
+    width: 55%;
+    margin-left: 360px;
+}
+
+
+.box1 h1{
+    font-weight: 400;
+    font-size: 3rem;
+    padding: 5px;
+    align-items: center;
+    font-family: 'geomanist-book',sans-serif;
+    line-height: 4rem
+ 
+}
+.box1 h3{
+
+    font-weight: bold;
+    font-size: 1.375;
+    padding: 5px;
+    color: #767777;
+    line-height: 3rem;
+    
+  
+
+}
+.boxtwo{
+    display :flex;
+    width:85%;
+    height :250px;
+    /* border:2px solid black; */
+    margin: auto;
+    margin-top: 30px;
+    grid-gap: 10px;
+}
+
+
+
+.boxtwoOne{
+  
+ /* border :2px  solid red   ; */
+ width : 24%;
+ height : 100%;
+ 
+
+}
+.boxtwoOne img{
+    /* border: 2px solid green; */
+    width:42%;
+    height:47%;
+    margin: auto;
+}
+.boxtwoOne h1{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+
+
+.leftSignupDiv{
+    /* max-height: auto; */
+    width: 100%;
+    height:auto;
+    margin: auto;
+    margin-top: 60px;
+    margin-right: 20px;
+    /* border:2px solid red; */
+    padding:10px;
+}
+
+.leftSignupDiv>h1{
+    font-size: 36px;
+    font-weight: 500;
+    color: #333333;
+    margin-left: 12%;
+    /* padding-left: 42%; */
+}
+.leftSignupDiv>p{
+   display: inline-block;
+    font-size: 18px;
+    color: #767676;
+    margin-top: 5px;
+
+   /* border: 2px solid black; */
+padding: 5px;
+    margin-left: 60px;
+}
+
+.signupInputDiv{
+    display: flex;
+    gap: 10px;
+    margin-left: 28%;
+}
+.signupInputDiv>input{
+    height: 48px;
+    width: 308px;
+}
+
+.signupInputDiv>div{
+    /* height: 48px;
+    width: 152px;
+    display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: #57BB71;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.signupInputDiv+div{
+    display: flex;
+    height:20px;
+    gap: 8px;
+    margin-top: 10px;
+    margin-left:40%;
+}
+.signupInputDiv+div>p{
+    color: #767676;
+    font-size: 17px;
+    
+}
+
+.Chokan{
+    margin-top: 2%;
+}
+.lastimg{
+    display: inline-block;
+    margin-left: 850px;
+    margin-bottom: 30px;
+    /* border: 2px solid black; */
+}
