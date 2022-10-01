@@ -1,12 +1,10 @@
-import { ADD_DATA_FAILURE, ADD_DATA_REQUEST, ADD_DATA_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS } from "./action.type"
-
-const inistate={
-projects:[],
-isLoading:false,
-isError:false
-}
-
-export const projectReducer=(state=inistate,{type,Payload})=>{
+import { ADD_DATA_FAILURE, ADD_DATA_REQUEST, ADD_DATA_SUCCESS, GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS } from "./action.type";
+const initState = {
+    data: [],
+    get: { loading: false, error: false },
+    post: { loading: false, error: false }
+  };
+export const projectReducer=(state=initState,{type,Payload})=>{
     switch(type){
         case GET_DATA_REQUEST:
             return{

@@ -1,5 +1,7 @@
-const mongoose=require('mongoose')
+const mongoose = require('mongoose');
 require('dotenv').config()
-const connection=mongoose.connect('mongodb+srv://work:work@cluster0.pldywc5.mongodb.net/?retryWrites=true&w=majority')
-
-module.exports={connection}
+const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.PASSWORD)
+const connection = async ()=>{
+    return  mongoose.connect(DB)
+}
+module.exports = connection;

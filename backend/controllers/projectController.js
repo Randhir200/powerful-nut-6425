@@ -1,12 +1,21 @@
-const Project = require('../models/projectModel');
+const Project = require("../models/projectModel");
 
 //get all projects
-exports.getData = async (req, res, next) => {
-  const projects = await Project.find();
-  res.status(200).json({
-    status: 'Success',
-    data: projects,
-  });
+exports.getData = async (req, res) => {
+  console.log('here');
+  try {
+    const projects = await Project.find();
+    res.status(200).json({
+      status: 'Success',
+      data: projects,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(401).json({
+      status: 'Failed',
+      message: 'could not get data',
+    });
+  }
 };
 
 //create project
