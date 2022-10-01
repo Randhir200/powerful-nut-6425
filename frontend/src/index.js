@@ -13,12 +13,9 @@ root.render(
     <ChakraProvider>
     <BrowserRouter>
     <ReduxProvider store={store}>
-
     <App />
     </ReduxProvider>
-    
     </BrowserRouter>
-
     </ChakraProvider>
   </React.StrictMode>
 );

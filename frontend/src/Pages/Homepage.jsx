@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
-
+import '../Styles/Home.css'
 const sliderData = [
   {
     "id": 1,
@@ -43,8 +43,6 @@ const sliderData = [
   },
 ]
 const Homepage = () => {
-  const [width, setWidth] = React.useState(window.outerWidth)
-  console.log(width)
   return (
     <Box mt="120px" mb="60px">
       {/* Upper Section */}
