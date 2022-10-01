@@ -6,7 +6,7 @@ const Pricing = () => {
   const [toggle, setToggle] = useState(false)
   console.log(toggle)
   return (
-    <Box h="auto" mt="140px" mb="60px">
+    <Box  mt="140px" mb="60px">
       {/* Upper section */}
       <Box h="auto" w="80%" m="auto">
         <Text fontSize="40px">Simple pricing</Text>

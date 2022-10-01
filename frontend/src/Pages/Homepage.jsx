@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
-import '../Styles/Home.css'
 const sliderData = [
   {
     "id": 1,
@@ -44,7 +43,7 @@ const sliderData = [
 ]
 const Homepage = () => {
   return (
-    <Box mt="120px" mb="60px">
+    <Box mt="120px" mb="60px" className='Home_main'>
       {/* Upper Section */}
       <Box w="80%" margin="auto" align="center" >
         <Heading>Powerful time tracking software with hassle-free <br /> integrations</Heading>

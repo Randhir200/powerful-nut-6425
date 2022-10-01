@@ -6,10 +6,10 @@ import MainRoutes from './Routes/MainRoutes';
 
 function App() {
   return (
-    <Box>
+    <div className='App'>
       <Navbar />
       <MainRoutes />
-    </Box>
+    </div>
   );
 }
 
