@@ -7,6 +7,7 @@ import Project from '../Components/Project';
 import DemoHome from '../Pages/DemoHome';
 import Homepage from '../Pages/Homepage';
 import Pricing from '../Pages/Pricing';
+import Projects from '../Pages/Projects';
 const MainRoutes = () => {
   return (
     <Routes>
@@ -16,6 +17,7 @@ const MainRoutes = () => {
       <Route path='/mainpage' element={<Mainpage />} />
       <Route path="/pricing" element={<Pricing/>}/>
       <Route path="/demo" element={<DemoHome/>}/>
+      <Route path="/projects" element={<Projects/>}/>
   </Routes>
   
   );
