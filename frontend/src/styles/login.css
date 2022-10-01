@@ -1,0 +1,102 @@
+.LoginSection{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    box-shadow: 0 2px 9px 0 rgb(0 0 0 / 17%);
+   
+    color: #7c7c7c;
+}
+.adGirl{
+    display:flex;
+  
+   flex-direction: row-reverse;
+   
+}
+.login_women{
+    width: 100%;
+    height: 100%;
+}
+.Link{
+    margin-left: 0.2rem;
+    color: #4070f4;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: underline;
+
+}
+.header{
+    font-size: 3rem;
+    font-family: "geomanist-regular sans-serif";
+}
+.sidecard{
+    border-left: 1px solid #7c7c7c;
+}
+.button{
+    cursor: pointer;
+}
+.InputForm{
+    border: none;
+}
+.SignupSection{
+    width: 35%;
+    box-shadow: 0 2px 9px 0 rgb(0 0 0 / 17%);
+}
+
+  
+ .card{
+    padding: 2.5rem;
+    border: 1px solid #cef5d6;
+    border-radius: 4px;
+    font-family: 'geomanist-regular',sans-serif;
+    color: #7c7c7c;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.44;
+ }
+ .Card_Grid{
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+    grid-template-areas: "a b c"
+                         "d e f"
+                         "g e h"  
+    
+    ;
+    
+ }
+ #a{
+    grid-area: a;
+ }
+ #b{
+    grid-area: b;
+ }
+ #d{
+    grid-area: d;
+ }
+ #d{
+    grid-area: d;
+ }
+ #e{
+    grid-area: e;
+ }
+ #f{
+    grid-area: f;
+ }
+ #g{
+    grid-area: g;
+ }
+ #h{
+    grid-area: h;
+ }
+ .Google_Button{
+    width: 50%;
+ }
+ .Header_signup{
+    font-size: 3rem;
+ }
+ #Try_Here{
+    width:60%
+ }
+ #Try_Here1{
+    width:80%
+ }

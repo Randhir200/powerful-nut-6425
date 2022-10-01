@@ -1,15 +1,26 @@
-import { Box } from '@chakra-ui/react';
+import logo from './logo.svg';
 import './App.css';
-import Footer from './Components/Footer';
-import Navbar from './Components/Navbar';
-import MainRoutes from './Routes/MainRoutes';
-
+import LoginForm from './Components/LoginForm';
+import SideCard from './Components/SideCard';
+import BottonTrail from './Components/BottonTrail';
+import Header from './Components/Header';
+import Login from './Pages/Login';
+import SignupForm from './Components/SignupForm';
+import Signup from './Pages/Signup';
+import './styles/Laptop.view.css'
+import './styles/Mobile.view.css'
+import './styles/login.css'
+import SignUpPages from './Pages/SignUpPages';
+import AllRoutes from './Routes/AllRoutes';
 function App() {
   return (
-    <Box className='App'>
-      <Navbar />
-      <MainRoutes />
-    </Box>
+    // <Login/>
+    <AllRoutes/>
+  // <LoginForm/>
+  // <SideCard/>
+  // <BottonTrail/>
+  // <Header/>
+  // <Signup/>
   );
 }
 
