@@ -50,3 +50,8 @@ li>img {
         flex-direction: column;
     }
 }
+@media (max-width:600px){
+    .input_space{
+        width:100%
+    }
+}

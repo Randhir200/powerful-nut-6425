@@ -9,6 +9,11 @@
 }
 .HamIcon{
     display: none;
+    position: fixed;
+    top:0;
+    z-index: 22;
+    background-color: white;
+    margin-bottom: 100px;
 }
 @media (max-width:1000px){
     .Navbar {
@@ -16,11 +21,5 @@
     }
     .HamIcon{
         display: flex;
-        justify-content: space-evenly;
-        position: fixed;
-        top:0;
-        z-index: 22;
-        background-color: white;
-        margin-bottom: 100px;
     }
 }

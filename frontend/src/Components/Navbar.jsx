@@ -56,7 +56,6 @@ const Navbar = () => {
                     <Link to={"/pricing"}>Price</Link>
                     <Link to={"/demo"}>Demo</Link>
 
-
                 </Box>
                 <Box h="100%" w="60%" display={"flex"} justifyContent=
                     "flex-end" gap="30px" alignItems={"center"} paddingRight="40px">
@@ -94,6 +93,7 @@ const Navbar = () => {
                         <NavLink>Integrations</NavLink>
                         <NavLink to={"/pricing"}>Price</NavLink>
                         <NavLink to={"/demo"}>Demo</NavLink>
+
                         <Box w="60%" display={"flex"} justifyContent="center" flexDirection={"column"} gap="30px" ml="150px" mt="100px" alignItems={"center"} paddingRight="40px">
                             <Button bg="white" w="70%">Login</Button>
                             <Button bg="#57BB71" color="white" w="70%">SignUp</Button>

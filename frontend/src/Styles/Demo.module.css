@@ -32,3 +32,17 @@
     margin-top: 40px;
     align: center;
 }
+
+@media (max-width:600px){
+    .center_card{
+        width: 100%;
+        margin: auto;
+        margin-top: 180px;
+    }
+    .bottomSignup{
+        width: 100%;
+        margin: auto;
+        margin-top: 40px;
+        align: center;
+    }
+}
