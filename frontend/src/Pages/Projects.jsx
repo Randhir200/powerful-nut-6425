@@ -1,6 +1,7 @@
 import React from 'react';
 import ServiceHeader from '../Components/ServiceHeader';
-import { Heading,Grid, GridItem } from '@chakra-ui/react';
+import { Heading, Grid, GridItem } from '@chakra-ui/react';
+import Sidebar from '../Components/Sidebar';
 
 const Projects = () => {
   return (
@@ -9,15 +10,18 @@ const Projects = () => {
         h='200px'
         templateRows='repeat(2, 1fr)'
         templateColumns='repeat(5, 1fr)'
+        mt='100px'
         gap={4}
-        >
-  <GridItem rowSpan={2} colSpan={1} bg='tomato' />
-  <GridItem colSpan={2} bg='papayawhip' />
-  <GridItem colSpan={2} bg='papayawhip' />
-  <GridItem colSpan={4} bg='tomato' />
-</Grid>
-      <Heading mt='100px'>Hello</Heading>
-      <ServiceHeader />
+      >
+        <GridItem rowSpan={2} colSpan={1}>
+          <Sidebar />
+        </GridItem>
+        <GridItem colSpan={2} bg='papayawhip'>
+          <ServiceHeader />
+          <Heading>Hello</Heading>
+        </GridItem>
+        <GridItem colSpan={4} bg='tomato' />
+      </Grid>
     </>
   );
 };
