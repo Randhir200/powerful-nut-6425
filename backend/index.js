@@ -21,12 +21,11 @@ app.get('/data', async (req, res) => {
   let data = await UserModel.find();
   res.send({ data: data });
 });
-const PORT = process.env.PORT || 8000;
-
-app.listen(PORT, async () => {
+const port = process.env.PORT || 8000;
+app.listen(port, async () => {
   try {
-    await connection;
-    console.log('connection established');
+    await connection();
+    console.log('connected ...');
   } catch (error) {
     console.log(error);
   }

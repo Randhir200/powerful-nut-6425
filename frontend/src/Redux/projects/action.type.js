@@ -6,3 +6,4 @@ export const GET_DATA_LOADING = 'GET_DATA_LOADING';
 export const ADD_DATA_REQUEST = 'ADD_DATA_REQUEST';
 export const ADD_DATA_SUCCESS = 'ADD_DATA_SUCCESS';
 export const ADD_DATA_FAILURE = 'ADD_DATA_FAILURE';
+export const DELETE_DATA = 'delete_data';

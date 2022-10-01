@@ -13,27 +13,36 @@ import {
   MenuOptionGroup,
   MenuDivider,
   Input,
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
 } from '@chakra-ui/react';
 import React,{useEffect} from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
 import { ChevronDownIcon } from '@chakra-ui/icons';
 
-import Modalform from '../Components/Modalform';
+import ProjectModal from '../Components/ProjectModal';
 import { getData } from '../Redux/projects/action';
 
 const Project = () => {
-  const data = useSelector((state) => state.productReducer);
+  const product = useSelector((state) => state.data);
+  console.log(product)
   const dispatch = useDispatch();
-  console.log(data)
   useEffect(() => {
-    dispatch(getData(`https://fakestoreapi.com/products`));
+    dispatch(getData(`http://localhost:8080/projects/`));
   },[]);
   return (
     <>
       <Flex h='50px' w='95%' justify='space-between' m='auto' align='center'>
         <Text fontSize='22px' color='black'>Create Projects</Text>
-        <Modalform data={'Create projects'} />
+        <ProjectModal data={'Create projects'} />
       </Flex>
 
       <Flex
@@ -116,6 +125,44 @@ const Project = () => {
         <Text fontSize='12px' color='grey'>
           BUDGET
         </Text>
+      </Flex>
+      <Flex>
+      <TableContainer  w="100%">
+        <Table variant='striped' colorScheme='teal'>
+          <TableCaption>Imperial to metric conversion factors</TableCaption>
+          <Thead>
+            <Tr>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th isNumeric>multiply by</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr>
+              <Td>inches</Td>
+              <Td>millimetres (mm)</Td>
+              <Td isNumeric>25.4</Td>
+            </Tr>
+            <Tr>
+              <Td>feet</Td>
+              <Td>centimetres (cm)</Td>
+              <Td isNumeric>30.48</Td>
+            </Tr>
+            <Tr>
+              <Td>yards</Td>
+              <Td>metres (m)</Td>
+              <Td isNumeric>0.91444</Td>
+            </Tr>
+          </Tbody>
+          <Tfoot>
+            <Tr>
+              <Th>To convert</Th>
+              <Th>into</Th>
+              <Th isNumeric>multiply by</Th>
+            </Tr>
+          </Tfoot>
+        </Table>
+      </TableContainer>
       </Flex>
     </>
   );

@@ -13,4 +13,3 @@ projectRoute
             .delete(projectController.delete)         
 
 module.exports = projectRoute
-
