@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Client from '../Components/Client';
@@ -12,9 +11,10 @@ const MainRoutes = () => {
     <Routes>
       <Route path='/' element={<Homepage />} />
       <Route path='/project' element={<Project />} />
-      <Route path='/client' element={<Client />} />
       <Route path='/mainpage' element={<Mainpage />} />
       <Route path="/pricing" element={<Pricing/>}/>
+      <Route path="/dashboard" element={<Dashbord/>}/>
+        <Route path="/clients" element={<Clients/>}/>
       <Route path="/demo" element={<DemoHome/>}/>
   </Routes>
   
