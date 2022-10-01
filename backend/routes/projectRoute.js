@@ -5,7 +5,7 @@ const projectController = require('../controllers/projectController');
 projectRoute
             .route('/')
             .get(projectController.getData)
-            .post(projectController.create)
+                .post(projectController.create)
 
 projectRoute
             .route('/:id')

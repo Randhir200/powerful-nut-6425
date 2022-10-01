@@ -16,6 +16,7 @@
        display: none;
     }
     .supply_footer{
+      border: 1px solid red;
        display: flex;
        flex-direction: column;
         width:100%;

@@ -9,7 +9,10 @@ const clientController = require('../controllers/clientController');
 ClientRouter
             .route('/')
             .get(clientController.getData)
-            .post(clientController.create)
+
+   
+ClientRouter
+.route('/create') .post(clientController.create)
 
 
 module.exports = ClientRouter
