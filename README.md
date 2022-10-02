@@ -3,7 +3,7 @@
   
 Everhour is a Non-govt company incorporated on 2010. This organisation has create the time and project management website that helps small and mid sized companies better organize their working hours
 
-As part of our construct week for group project in Unit 4 at Masai School, we were given to build the clone of the Dot & Key website.
+As part of our construct week for group project in Unit 6 at Masai School, we were given to build the clone of the Everhour website.
 
 ## Acknowledgements
 
