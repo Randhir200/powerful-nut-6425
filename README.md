@@ -27,6 +27,7 @@ As part of our construct week for group project in Unit 4 at Masai School, we we
 - CSS
 - Javascript
 - ReactJs
+- Redux
 - Chakra UI
 - NodeJs
 - Express
@@ -83,7 +84,7 @@ As part of our construct week for group project in Unit 4 at Masai School, we we
 ## Lessons Learned
 
 - Use of GitHub to collaborate.
-- Insight into how Pages are actually built by React Js.
+- Insight into how a full stack application is made.
 - Learned Routing.
-- Building a website using HTML, CSS, Javascript(Local Storage), Bootstrap, React Js, Redux, React-redux, Redux-thunk, Swiper, Chakra Ui, Slick-slider.
+- Building a website using HTML, CSS, Javascript, Bootstrap, React Js, Redux, React-redux, Redux-thunk, Chakra Ui, NodeJs, Express Api.
 - How to read and understand colleague's code efficiently.
