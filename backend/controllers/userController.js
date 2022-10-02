@@ -9,7 +9,7 @@ const SECRET_CODE=process.env.SECRET_CODE || "secret"
 
 exports.signup = (req, res) => {
   const data = req.body;
-
+  //  console.log(data)
   let password = data.password;
   let email = data.email;
 
@@ -74,9 +74,5 @@ console.log(data)
     else{
       res.status(404).send("something is wrong")
     }
-  
- 
-
-
 
 };

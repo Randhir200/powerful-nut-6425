@@ -9,6 +9,7 @@ import Project from '../Pages/Project';
 import Signup from '../Pages/Signup';
 import SignUpPages from '../Pages/SignUpPages';
 import { SliderNav } from './SliderNav';
+import DemoHome from '../Pages/DemoHome'
 const MainRoutes = () => {
   return (
     <Routes>
@@ -18,6 +19,7 @@ const MainRoutes = () => {
         <Route path='/projects' element={<Project />} />
       </Route>
       <Route path='/pricing' element={<Pricing />} />
+      <Route path="/demo"  element={<DemoHome />}/>
       <Route path="/register" element={<Signup/>}/>
 <Route path='/Signup' element={<SignUpPages/>}/>
 <Route path="/Login" element={<Login/>}/>

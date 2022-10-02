@@ -59,8 +59,8 @@ const Navbar = () => {
                 </Box>
                 <Box h="100%" w="60%" display={"flex"} justifyContent=
                     "flex-end" gap="30px" alignItems={"center"} paddingRight="40px">
-                    <Link to="/Login" bg="white'">Login</Link>
-                    <Link to="/Signup" bg="#57BB71" color="white">SignUp</Link>
+                    <Button bg="white"><Link to="/Login" >Login</Link></Button>
+                    <Button bg="#57BB71" color="white"><Link to="/Signup" >SignUp</Link></Button>
                 </Box>
             </Box>
             {/* HamIcon */}
@@ -95,8 +95,8 @@ const Navbar = () => {
                         <NavLink to={"/demo"}>Demo</NavLink>
 
                         <Box w="60%" display={"flex"} justifyContent="center" flexDirection={"column"} gap="30px" ml="150px" mt="100px" alignItems={"center"} paddingRight="40px">
-                            <Link to="/Login" bg="white" w="70%">Login</Link>
-                            <Link to="/Signup" bg="#57BB71" color="white" w="70%">SignUp</Link>
+                            <Button bg="white" w="70%"><Link to="/Login">Login</Link></Button>
+                            <Button bg="#57BB71" color="white" w="70%"  ><NavLink to="/Signup">SignUp</NavLink></Button>
                         </Box>
                     </DrawerBody>
                 </DrawerContent>

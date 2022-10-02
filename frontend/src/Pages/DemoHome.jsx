@@ -4,9 +4,13 @@ import { Button } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import styles from "../Styles/Demo.module.css";
 import { NavLink } from 'react-router-dom'
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 const Demo = () => {
   return (
-    <Box className={styles.main_container}>
+      <>
+      <Navbar />
+      <Box className={styles.main_container}>
       <Box className={styles.heading_text}>
         <Heading fontSize={"52px"}>Book a 30-min live demo 🚀</Heading>
         <Text fontFamily="'geomanist-regular',sans-serif"
@@ -50,7 +54,9 @@ const Demo = () => {
         </Box>
       </Box>
     </Box>
-  );
+      <Footer />
+      </>
+    );
 };
 
 export default Demo;

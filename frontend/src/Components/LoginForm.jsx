@@ -11,12 +11,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
   const dispatch = useDispatch();
   const [state, setState] = useState({
     email: "",
     password: "",
   });
+
+  const nav = useNavigate()
+  
   const HandleSubmit = () => {
     dispatch(Login(state))
 
@@ -26,11 +30,12 @@ const LoginForm = () => {
     dispatch(GoogleOauth);
   };
   const notify = (res) => toast(res);
-const isLoading=useSelector((store)=>store.isLoading)
-const isAuth=useSelector((store)=>store.isAuth)
-const isError=useSelector((store)=>store.isError)
+const isLoading=useSelector((store)=>store.AuthReducer.isLoading)
+const isAuth=useSelector((store)=>store.AuthReducer.isAuth)
+const isError=useSelector((store)=>store.AuthReducer.isError)
+console.log(isError)
 useEffect(()=>{
-isAuth&&notify("Successfully Login ")
+isAuth&&notify("Successfully Login ") ? nav("/projects"):
 isError&&notify("Whoops! Something is wrong! ")
 },[isError,isLoading])
 console.log("iserror",isError)

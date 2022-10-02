@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
 const DB = `mongodb+srv://randhir:mongo2022@cluster0.lam2rvb.mongodb.net/everhour-clone?retryWrites=true&w=majority`;
 const connection = async () => {
   return mongoose.connect(

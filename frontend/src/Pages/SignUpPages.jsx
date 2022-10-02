@@ -19,6 +19,8 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { All_FAILED } from '../Redux/auth/ActionType';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 function SignUpPages() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -43,6 +45,8 @@ function SignUpPages() {
   const notify = () => toast("Let's Go!");
 
   return (
+    <>
+    <Navbar />
     <Box w='100%' mt='4rem'>
       <ToastContainer position='top-center' />
       <Box w='100%'>
@@ -227,6 +231,8 @@ function SignUpPages() {
         </Button>
       </Center>
     </Box>
+    <Footer />
+    </>
   );
 }
 

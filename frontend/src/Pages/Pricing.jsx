@@ -1,11 +1,15 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Heading, Img, Input, SimpleGrid, Stack, Switch, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import Footer from '../Components/Footer'
+import Navbar from '../Components/Navbar'
 import styles from '../Styles/price.module.css'
 const Pricing = () => {
   const [toggle, setToggle] = useState(false)
   console.log(toggle)
   return (
+    <>
+    <Navbar />
     <Box  mt="140px" mb="60px">
       {/* Upper section */}
       <Box h="auto" w="80%" m="auto">
@@ -233,6 +237,8 @@ const Pricing = () => {
         </Box>
       </Box>
     </Box>
+    <Footer />
+    </>
   )
 }
 
