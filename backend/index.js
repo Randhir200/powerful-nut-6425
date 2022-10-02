@@ -11,12 +11,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/projects', projectRoute);
-app.use('/clients', ClientRouter);
+app.use('/clients', ClientRouter)
 app.use('/user', UserRoute);
 app.get('/', (req, res) => {
   res.send('<h1>hello everyone</h1>');
 });
-
 app.get('/data', async (req, res) => {
   let data = await UserModel.find();
   res.send({ data: data });

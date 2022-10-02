@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Modal,
   ModalOverlay,
@@ -18,9 +18,11 @@ import {
 } from '@chakra-ui/react';
 import { EditIcon } from '@chakra-ui/icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { editData, postData } from '../Redux/projects/action';
-import { getData } from '../Redux/clients/action';
-const ProjectModal = ({
+import { editData, postData } from '../Redux/clients/action';
+import { useEffect } from 'react';
+import { getData } from '../Redux/projects/action';
+
+const Modalclient = ({
   data,
   handleBool,
   bool,
@@ -30,11 +32,11 @@ const ProjectModal = ({
   handleUpdate,
   isUpdate,
 }) => {
-  const clientData = useSelector((state) => state.clientReducer.data);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [project, setProject] = useState({});
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
+  const projectData = useSelector((state) => state.projectReducer.data);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProject({
@@ -44,6 +46,7 @@ const ProjectModal = ({
   };
   const dispatch = useDispatch();
   const handleonSubmit = () => {
+    handleBool(bool + 1);
     if (isEdit) {
       dispatch(editData({ id, project }));
       handleUpdate(true);
@@ -55,11 +58,10 @@ const ProjectModal = ({
       dispatch(postData(project));
     }
 
-    handleBool(bool + 1);
     onClose();
   };
   useEffect(() => {
-    dispatch(getData(`http://localhost:8080/clients/`));
+    dispatch(getData(`http://localhost:8080/projects/`));
   }, []);
   return (
     <>
@@ -67,7 +69,9 @@ const ProjectModal = ({
         {isEdit ? (
           <EditIcon onClick={onOpen}>{data}</EditIcon>
         ) : (
-          <Button bg='lightgreen' color='green' onClick={onOpen}>{data}</Button>
+          <Button bg='lightgreen' color='green' onClick={onOpen}>
+            {data}
+          </Button>
         )}
 
         <Modal
@@ -78,13 +82,13 @@ const ProjectModal = ({
         >
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>{title}</ModalHeader>
+            <ModalHeader>Create your account</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
               <FormControl>
-                <FormLabel>project name</FormLabel>
+                <FormLabel>client name</FormLabel>
                 <Input
-                  name='name'
+                  name='Client_name'
                   ref={initialRef}
                   placeholder='First name'
                   onChange={handleChange}
@@ -92,33 +96,54 @@ const ProjectModal = ({
               </FormControl>
 
               <FormControl mt={4}>
-                <FormLabel>Clients</FormLabel>
-                <Select name='clientId' onChange={handleChange}>
+                <FormLabel>Projects</FormLabel>
+                <Select name='Projects' onChange={handleChange}>
                   <option value='null'>Select</option>
-                  {clientData.map((el) => (
-                    <option key={el._id} value={[el._id, el.Client_name]}>
-                      {el.Client_name}
+                  {projectData.map((el) => (
+                    <option key={el._id} value={[el._id, el.name]}>
+                      {el.name}
                     </option>
                   ))}
                 </Select>
               </FormControl>
 
               <FormControl mt={4}>
-                <FormLabel>Privacy</FormLabel>
-                <Select name='privacy' onChange={handleChange}>
-                  <option value='null'>Select</option>
-                  <option value='public'>Public to Team</option>
-                  <option value='private'>Only selected members</option>
-                </Select>
+                <FormLabel>Email</FormLabel>
+                <Input name='email' onChange={handleChange} />
               </FormControl>
               <FormControl mt={4}>
-                <FormLabel>Who Can Manage Tasks</FormLabel>
-                <Select name='manage' onChange={handleChange}>
-                  <option value='null'>Select</option>
-                  <option value='everyone'>Everyone</option>
-                  <option value='admin'>Admins</option>
-                </Select>
+                <FormLabel>Business Details</FormLabel>
+                <Textarea
+                  size='lg'
+                  name='Business_Details'
+                  onChange={handleChange}
+                />
               </FormControl>
+              <Flex gap={'20px'} mt={7}>
+                <FormControl>
+                  <FormLabel>Tax, %</FormLabel>
+                  <Input type='number' name='Tax' onChange={handleChange} />
+                </FormControl>
+
+                <FormControl>
+                  <FormLabel>Discount, %</FormLabel>
+                  <Input
+                    type='number'
+                    name='Discount'
+                    onChange={handleChange}
+                  />
+                </FormControl>
+
+                <FormControl>
+                  <FormLabel>Due Terms</FormLabel>
+                  <Select name='due' onChange={handleChange}>
+                    <option value='Imm'>Imm</option>
+                    <option value='3days'>+3days</option>
+                    <option value='5days'>+5days</option>
+                    <option value='7days'>+7days</option>
+                  </Select>
+                </FormControl>
+              </Flex>
             </ModalBody>
 
             <ModalFooter>
@@ -134,4 +159,4 @@ const ProjectModal = ({
   );
 };
 
-export default ProjectModal;
+export default Modalclient;

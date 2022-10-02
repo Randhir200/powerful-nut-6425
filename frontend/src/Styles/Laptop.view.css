@@ -1,0 +1,47 @@
+@media screen and (max-width: 992px) {
+   
+    .LoginSection{
+       
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        gap: 20px;
+   
+    }
+
+    .sidecard{
+        border-top: 1px solid #7c7c7c;
+        border-left: none
+
+    }
+    .header{
+        font-size: 2rem;
+    }
+    .SignupSection{
+        width: 50%;
+    }
+    .Card_Grid{
+        grid-template-columns: repeat(2, 1fr);
+    
+     grid-template-areas: "a b"
+                          "c d"
+                          "e f"
+                          "g h"  
+     
+     ;}
+     .header{
+        font-size: 2rem;
+    }
+    .Google_Button{
+       width:  70%
+      }
+      .Header_signup{
+        font-size: 2rem;
+     }
+     #Try_Here{
+        width:70%
+     }
+     #Try_Here1{
+        width:90%
+     }
+  }
+  

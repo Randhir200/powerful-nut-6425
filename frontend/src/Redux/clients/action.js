@@ -1,42 +1,42 @@
 import axios from 'axios';
 import {
-  ADD_DATA_SUCCESS_P,
-  GET_DATA_FAILURE_P,
-  GET_DATA_LOADING_P,
-  GET_DATA_SUCCESS_P,
-  DELETE_DATA_P,
+  ADD_DATA_SUCCESS_C,
+  GET_DATA_FAILURE_C,
+  GET_DATA_LOADING_C,
+  GET_DATA_SUCCESS_C,
+  DELETE_DATA_C,
 } from './action.type';
 
 export const getData = (url) => async (dispatch) => {
   try {
     let res = await axios.get(url);
-    //  console.log(res.data.data)
+    // console.log(res.data);
     dispatch({
-      type: GET_DATA_SUCCESS_P,
-      Payload: res.data.data,
+      type: GET_DATA_SUCCESS_C,
+      Payload: res.data,
     });
     dispatch({
-      type: GET_DATA_LOADING_P,
+      type: GET_DATA_LOADING_C,
     });
     dispatch({
-      type: GET_DATA_FAILURE_P,
+      type: GET_DATA_FAILURE_C,
     });
   } catch (err) {
     dispatch({
-      type: GET_DATA_FAILURE_P,
+      type: GET_DATA_FAILURE_C,
     });
     dispatch({
-      type: GET_DATA_LOADING_P,
+      type: GET_DATA_LOADING_C,
     });
   }
 };
 
 export const postData = (Payload) => async (dispatch) => {
   try {
-    let res = await axios.post('http://localhost:8080/projects/', Payload);
-    //  console.log(res.data.data)
+    let res = await axios.post('http://localhost:8080/clients/', Payload);
+     console.log(res.data.data)
     dispatch({
-      type: ADD_DATA_SUCCESS_P,
+      type: ADD_DATA_SUCCESS_C,
     });
   } catch (err) {
     console.log(err);
@@ -46,13 +46,15 @@ export const postData = (Payload) => async (dispatch) => {
 export const editData =
   ({ id, project }) =>
   async (dispatch) => {
+    console.log('paylaod', project);
     try {
       let res = await axios.patch(
-        `http://localhost:8080/projects/${id}`,
+        `http://localhost:8080/clients/${id}`,
         project
       );
+      console.log('res', res.data);
       dispatch({
-        type: ADD_DATA_SUCCESS_P,
+        type: ADD_DATA_SUCCESS_C,
       });
     } catch (err) {
       console.log(err);
@@ -61,9 +63,9 @@ export const editData =
 
 export const delData = (id) => async (dispatch) => {
   try {
-    let res = await axios.delete(`http://localhost:8080/projects/${id}`);
+    let res = await axios.delete(`http://localhost:8080/clients/${id}`);
     dispatch({
-      type: DELETE_DATA_P,
+      type: DELETE_DATA_C,
     });
   } catch (err) {
     console.log(err);

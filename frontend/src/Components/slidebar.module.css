@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.main-container {
+.main_container {
   display: flex;
   border-left: 3px solid #03a9f4;
 }
@@ -28,7 +28,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 1vh 1.5vw;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-bottom: 2px solid #ccc;
   border-left: 3px solid #03a9f4;
   position: sticky;
@@ -44,7 +44,7 @@ main {
   gap: 1vw;
   font-size: large;
 }
-.bars > svg{
+.bars > svg {
   cursor: pointer;
   font-size: 23px;
   color: #797979;
@@ -61,9 +61,9 @@ main {
   flex-direction: column;
   gap: 5px;
   border-right: 2px solid #ccc;
-  min-height: 95vh;  
+  min-height: 95vh;
 }
-.icon{
+.icon {
   padding-left: 10px;
   font-size: 23px;
   color: #797979;

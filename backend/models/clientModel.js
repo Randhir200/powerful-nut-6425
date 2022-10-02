@@ -2,12 +2,12 @@ const mongoose =require("mongoose")
 
 const ClientSchema=new mongoose.Schema({
     Client_name:{type:String,required:true},
+    email:{type:String},
     Business_Details:{type:String,},
     Tax:{type:Number},
     Discount:{type:Number},
-    Projects:[]       
-       
-    
+    due:{type:String},
+    Projects:[]         
 })
 
 

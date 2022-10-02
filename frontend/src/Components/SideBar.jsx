@@ -14,14 +14,14 @@ import { RiTeamLine } from "react-icons/ri";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { AiOutlineClockCircle, AiOutlineSetting } from "react-icons/ai";
 
-import "./slidebar.css";
+import styles from "./slidebar.module.css";
 import Client from "../Pages/Client";
 // import { Navbar } from "../navbar/Navbar";
 // import clockify_logo from "../../assets/clockify-logo.svg";
 
 const routes = [
   {
-    path: "/dashboard",
+    path: "/",
     name: "HOME",
     icon: <MdOutlineDashboardCustomize />,
   },
@@ -93,8 +93,8 @@ const routes = [
 
   return (
     <>
-      <div className="top_section">
-        <div className="bars">
+      <div className={styles.top_section}>
+        <div className={styles.bars}>
           <FaBars onClick={toggle} />
           {/* <img src={clockify_logo} alt="clockify_logo" /> */}
         </div>
@@ -104,7 +104,7 @@ const routes = [
         </div>
       </div>
 
-      <div className="main-container">
+      <div className={styles.main_container}>
         <motion.div
           animate={{
             width: isOpen ? "210px" : "65px",
@@ -114,9 +114,9 @@ const routes = [
               damping: 20,
             },
           }}
-          className="sidebar"
+          className={styles.sidebar}
         >
-          <section className="routes">
+          <section className={styles.routes}>
             {routes.map((route, index) => {
               if (route.subRoutes) {
                 return (
@@ -134,10 +134,10 @@ const routes = [
                 <NavLink
                   to={route.path}
                   key={index}
-                  className="link"
+                  className={styles.link}
                   activeclassname="active"
                 >
-                  <div className="icon">{route.icon}</div>
+                  <div className={styles.icon}>{route.icon}</div>
                   <AnimatePresence>
                     {isOpen && (
                       <motion.div
@@ -145,7 +145,7 @@ const routes = [
                         initial="hidden"
                         animate="show"
                         exit="hidden"
-                        className="link_text"
+                        className={styles.link_text}
                       >
                         {route.name}
                       </motion.div>

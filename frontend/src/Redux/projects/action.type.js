@@ -1,9 +1,9 @@
-export const GET_DATA_REQUEST = 'GET_DATA_REQUEST';
-export const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS';
-export const GET_DATA_FAILURE = 'GET_DATA_FAILURE';
-export const GET_DATA_LOADING = 'GET_DATA_LOADING';
+export const GET_DATA_REQUEST_p = 'GET_DATA_REQUEST_P';
+export const GET_DATA_SUCCESS_P = 'GET_DATA_SUCCESS_P';
+export const GET_DATA_FAILURE_P = 'GET_DATA_FAILURE_P';
+export const GET_DATA_LOADING_P = 'GET_DATA_LOADING_P';
 
-export const ADD_DATA_REQUEST = 'ADD_DATA_REQUEST';
-export const ADD_DATA_SUCCESS = 'ADD_DATA_SUCCESS';
-export const ADD_DATA_FAILURE = 'ADD_DATA_FAILURE';
-export const DELETE_DATA = 'delete_data';
+export const ADD_DATA_REQUEST_P = 'ADD_DATA_REQUEST_P';
+export const ADD_DATA_SUCCESS_P = 'ADD_DATA_SUCCESS_P';
+export const ADD_DATA_FAILURE_P = 'ADD_DATA_FAILURE_P';
+export const DELETE_DATA_P = 'delete_data_P';

@@ -22,27 +22,69 @@ import {
   Td,
   TableCaption,
   TableContainer,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
 } from '@chakra-ui/react';
-import React,{useEffect} from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { DeleteIcon, EditIcon } from '@chakra-ui/icons';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { ChevronDownIcon } from '@chakra-ui/icons';
 
 import ProjectModal from '../Components/ProjectModal';
-import { getData } from '../Redux/projects/action';
+import { delData, editData, getData } from '../Redux/projects/action';
 
 const Project = () => {
-  const product = useSelector((state) => state.data);
-  console.log(product)
+  const [bool, setBool] = useState(0);
+  const [isDelete, setDelete] = useState(false);
+  const [isUpdate, setUpdate] = useState(false);
+  const projectData = useSelector((state) => state.projectReducer.data);
   const dispatch = useDispatch();
+  async function handleDelete(id) {
+    await dispatch(delData(id));
+    setDelete(true);
+    setBool(bool + 1);
+    setTimeout(() => {
+      setDelete(false);
+    }, 1000);
+  }
+
   useEffect(() => {
     dispatch(getData(`http://localhost:8080/projects/`));
-  },[]);
+  }, [bool]);
+
   return (
     <>
+      {isDelete ? (
+        <Alert status='warning'>
+          <AlertIcon />
+          Your project has been deleted!
+        </Alert>
+      ) : (
+        <></>
+      )}
+
+      {isUpdate ? (
+        <Alert status='success' variant='subtle'>
+          <AlertIcon />
+          Project has been updated successfully!
+        </Alert>
+      ) : (
+        <></>
+      )}
       <Flex h='50px' w='95%' justify='space-between' m='auto' align='center'>
-        <Text fontSize='22px' color='black'>Create Projects</Text>
-        <ProjectModal data={'Create projects'} />
+        <Text fontSize='22px' color='black'>
+          Create Projects
+        </Text>
+        <ProjectModal
+          title={'Create Project'}
+          bool={bool}
+          handleBool={setBool}
+          isEdit={false}
+          data={'Create projects'}
+        />
       </Flex>
 
       <Flex
@@ -127,42 +169,51 @@ const Project = () => {
         </Text>
       </Flex>
       <Flex>
-      <TableContainer  w="100%">
-        <Table variant='striped' colorScheme='teal'>
-          <TableCaption>Imperial to metric conversion factors</TableCaption>
-          <Thead>
-            <Tr>
-              <Th>To convert</Th>
-              <Th>into</Th>
-              <Th isNumeric>multiply by</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            <Tr>
-              <Td>inches</Td>
-              <Td>millimetres (mm)</Td>
-              <Td isNumeric>25.4</Td>
-            </Tr>
-            <Tr>
-              <Td>feet</Td>
-              <Td>centimetres (cm)</Td>
-              <Td isNumeric>30.48</Td>
-            </Tr>
-            <Tr>
-              <Td>yards</Td>
-              <Td>metres (m)</Td>
-              <Td isNumeric>0.91444</Td>
-            </Tr>
-          </Tbody>
-          <Tfoot>
-            <Tr>
-              <Th>To convert</Th>
-              <Th>into</Th>
-              <Th isNumeric>multiply by</Th>
-            </Tr>
-          </Tfoot>
-        </Table>
-      </TableContainer>
+        <TableContainer w='100%'>
+          <Table variant='striped' colorScheme='teal'>
+            {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
+            <Thead>
+              <Tr>
+                <Th>Name</Th>
+                <Th>Privacy</Th>
+                <Th>Manage</Th>
+                <Th>Client</Th>
+                <Th>Action</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {projectData &&
+                projectData.map((el, i) => (
+                  <Tr key={i}>
+                    <Td>{el.name}</Td>
+                    <Td>{el.privacy}</Td>
+                    <Td>{el.manage}</Td>
+                
+                    <Td>{el.clientId[0].split(',')[1]}</Td>
+                    <Td>
+                      <Flex>
+                        <DeleteIcon
+                          onClick={() => handleDelete(el._id)}
+                          mt='4px'
+                          mr='10px'
+                        />
+                        <ProjectModal
+                          title={'Edit Projects '}
+                          bool={bool}
+                          handleBool={setBool}
+                          isEdit={true}
+                          id={el._id}
+                          data={'Edit Project'}
+                          handleUpdate={setUpdate}
+                          isUpdate={isUpdate}
+                        />
+                      </Flex>
+                    </Td>
+                  </Tr>
+                ))}
+            </Tbody>
+          </Table>
+        </TableContainer>
       </Flex>
     </>
   );
