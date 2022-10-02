@@ -7,7 +7,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
-import style from '../Styles/Home.module.css'
+import style from '../Styles/Home.module.css';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer.jsx'
 const sliderData = [
   {
     "id": 1,
@@ -44,6 +46,8 @@ const sliderData = [
 ]
 const Homepage = () => {
   return (
+    <>
+    <Navbar/>
     <Box mt="120px" mb="60px" className='Home_main'>
       {/* Upper Section */}
       <Box w="80%" margin="auto" align="center" >
@@ -148,6 +152,8 @@ const Homepage = () => {
         </Box>
       </SimpleGrid>
     </Box>
+    <Footer/>
+    </>
   )
 }
 

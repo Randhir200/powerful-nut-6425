@@ -1,0 +1,9 @@
+export const GET_DATA_REQUEST_C = 'GET_DATA_REQUEST_C';
+export const GET_DATA_SUCCESS_C = 'GET_DATA_SUCCESS_C';
+export const GET_DATA_FAILURE_C = 'GET_DATA_FAILURE_C';
+export const GET_DATA_LOADING_C = 'GET_DATA_LOADING_C';
+
+export const ADD_DATA_REQUEST_C = 'ADD_DATA_REQUEST_C';
+export const ADD_DATA_SUCCESS_C = 'ADD_DATA_SUCCESS_C';
+export const ADD_DATA_FAILURE_C = 'ADD_DATA_FAILURE_C';
+export const DELETE_DATA_C = 'delete_data_C';

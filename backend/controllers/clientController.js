@@ -24,14 +24,14 @@ exports.create = async (req, res, next)=>{
 
     const {Client_name,Business_Details,Tax,Discount}=req.body;
 
-    const createuser=new Clientmodel({userid:userid,Client_name,Business_Details,Tax,Discount,Projects: {_id,name}})
+    const createuser=new Clientmodel(req.body)
     try{
       await createuser.save()
-      res.send("note created")
+      res.send({"mess":"client created"})
     }
     catch(err)
     {
-      res.send("something went wrong")
+      res.send({"mess":"something went wrong"})
     }
 }
 
@@ -55,14 +55,9 @@ exports.update = async (req, res) => {
 exports.delete = async (req, res) => {
     const{id}=req.params
     //  res.send(id)
-    const deletenote=await notesmodel.findOneAndDelete({_id:id})
-    if(deletenote)
-    {
-      res.send(" deleted")
-    }
-    else
-    {
-      res.send("client not found")
-    }
+    const deletenote=await Clientmodel.findOneAndDelete({_id:id})
+    res.status(200).json({
+      status: 'Project has been deleted',
+    });
     
 }

@@ -5,7 +5,7 @@ exports.getData = async (req, res, next) => {
   const projects = await Project.find();
   res.status(200).json({
     status: 'Success',
-    "data":[projects]
+    "data":projects
   });
 };
 

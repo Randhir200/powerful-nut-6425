@@ -26,7 +26,7 @@ const projectSchema = new mongoose.Schema({
     },
   ],
   userId: Object,
-  clientId: Object,
+  clientId: [],
   memberId: Object,
 });
 
