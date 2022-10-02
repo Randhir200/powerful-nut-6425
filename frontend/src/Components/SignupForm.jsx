@@ -16,6 +16,7 @@ import {
 
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { Signup } from "../Redux/auth/action";
 import { saveLocalData } from "../utils/localStorage";
 
@@ -28,8 +29,11 @@ function SignupForm() {
     Phone: 0,
     password: "",
   });
+  const nav = useNavigate()
+
   const HandleSubmit = () => {
     dispatch(Signup(state)).then((res) => console.log(res));
+    nav("/login")
   };
 
   const isLoading = useSelector((store) => store.AuthReducer.isLoading);

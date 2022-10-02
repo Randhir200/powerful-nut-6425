@@ -23,7 +23,7 @@ export const reducer = (state = InitialState, action) => {
     case SIGNUP_SUCCESS:
       return {
         ...state,
-        isAuth: true,
+        isAuth: false,
         isLoading: false,
         isError: false,
       };

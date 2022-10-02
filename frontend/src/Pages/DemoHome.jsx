@@ -17,10 +17,10 @@ const Demo = () => {
           fontWeight="400" fontSize="1.375rem" mt="30px" lineHeight="1.35rem" color="#767676">10+ users? Let one of our customer success experts show you how Everhour <br /> works, with plenty of time set aside for questions</Text>
         <Box display="flex" gap="30px" justifyContent="center" mt="50px">
           <Button bg="#57BB71" w="200px" h="50px" color="white" fontWeight="400">Schedule time</Button>
-          <Button border="1px solid #57BB71" w="200px" h="50px" bg="white" color="#57BB71" fontWeight="400"><NavLink>Watch videos</NavLink></Button>
+          <Button border="1px solid #57BB71" w="200px" h="50px" bg="white" color="#57BB71" fontWeight="400"><NavLink to="https://www.youtube.com/playlist?list=PLpi40TLI2leiI-UuWIu-19xdTuGZwtHU3 " target="_blank">Watch videos</NavLink></Button>
         </Box>
       </Box>
-      {/* https://www.youtube.com/playlist?list=PLpi40TLI2leiI-UuWIu-19xdTuGZwtHU3 */}
+      {/* */}
       {/* Card */}
       <Box className={styles.center_card}>
         <ul>
