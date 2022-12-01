@@ -182,14 +182,13 @@ const Project = () => {
               </Tr>
             </Thead>
             <Tbody>
-              {projectData &&
-                projectData.map((el, i) => (
+              {projectData?.map((el, i) => (
                   <Tr key={i}>
                     <Td>{el.name}</Td>
                     <Td>{el.privacy}</Td>
                     <Td>{el.manage}</Td>
                 
-                    <Td>{el.clientId[0].split(',')[1]}</Td>
+                    <Td>{el.clientId[0]}</Td>
                     <Td>
                       <Flex>
                         <DeleteIcon

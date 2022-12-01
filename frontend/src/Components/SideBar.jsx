@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
@@ -16,6 +16,7 @@ import { AiOutlineClockCircle, AiOutlineSetting } from "react-icons/ai";
 
 import styles from "./slidebar.module.css";
 import Client from "../Pages/Client";
+import { Button } from "@chakra-ui/react";
 // import { Navbar } from "../navbar/Navbar";
 // import clockify_logo from "../../assets/clockify-logo.svg";
 
@@ -73,7 +74,7 @@ const routes = [
  export const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-
+  const nav = useNavigate()
   const showAnimation = {
     hidden: {
       width: 0,
@@ -101,13 +102,18 @@ const routes = [
 
         <div>
           {/* <Navbar /> */}
+          <Button colorScheme={'teal'} onClick={()=>{
+          localStorage.clear();
+          nav('/')
+          console.log('Logged Out')
+          }}>Signout</Button>
         </div>
       </div>
 
       <div className={styles.main_container}>
         <motion.div
           animate={{
-            width: isOpen ? "210px" : "65px",
+            width: isOpen ? "200px" : "65px",
             transition: {
               duration: 0.05,
               type: "spring",

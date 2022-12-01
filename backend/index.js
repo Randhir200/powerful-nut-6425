@@ -20,7 +20,7 @@ app.get('/data', async (req, res) => {
   let data = await UserModel.find();
   res.send({ data: data });
 });
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 7070;
 app.listen(port, async () => {
   try {
     await connection();
